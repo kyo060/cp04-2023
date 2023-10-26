@@ -195,13 +195,18 @@
 
     // ButtonCがクリックされた時の処理
     function btnCClick(e){
+        main();
         alarm();
         active = false;
         period = 60 * parseInt($("#minute").val()) + parseInt($("#second").val());
         $("#time").html("経過時間：0");
         $("#remain").html("残り時間： " + period);
-        
     }
+
+     function main() {
+          var msg = "Let's Start!";
+          $("#disp1").html(msg);
+ }
     
  
     // 繰り返し実行する処理
